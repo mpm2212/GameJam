@@ -129,6 +129,9 @@ GameObject:
   m_Component:
   - component: {fileID: 63345208}
   - component: {fileID: 63345207}
+  - component: {fileID: 63345209}
+  - component: {fileID: 63345211}
+  - component: {fileID: 63345210}
   m_Layer: 0
   m_Name: Walk_0
   m_TagString: Untagged
@@ -206,6 +209,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &63345209
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63345206}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &63345210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63345206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec7db5436737d467eb2288f801cfba9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdSprites:
+  - {fileID: 4035959289877228764, guid: b4e8fc0364649463db39ca98b5044256, type: 3}
+  - {fileID: -982904232830982447, guid: b4e8fc0364649463db39ca98b5044256, type: 3}
+  - {fileID: -350908408369970039, guid: b4e8fc0364649463db39ca98b5044256, type: 3}
+  - {fileID: -5409570386352685021, guid: b4e8fc0364649463db39ca98b5044256, type: 3}
+  - {fileID: 1553940418269799609, guid: b4e8fc0364649463db39ca98b5044256, type: 3}
+  - {fileID: 2416434504916517810, guid: b4e8fc0364649463db39ca98b5044256, type: 3}
+  animationFPS: 5
+--- !u!114 &63345211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63345206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d628076d807c245ff9b2de875c33cdc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -2
 --- !u!1 &345183515
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +279,9 @@ GameObject:
   m_Component:
   - component: {fileID: 345183517}
   - component: {fileID: 345183516}
+  - component: {fileID: 345183520}
+  - component: {fileID: 345183519}
+  - component: {fileID: 345183518}
   m_Layer: 0
   m_Name: pigeon1
   m_TagString: Untagged
@@ -293,54 +359,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &358526516
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 358526517}
-  - component: {fileID: 358526518}
-  m_Layer: 0
-  m_Name: Bird2Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &358526517
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 358526516}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.03, y: -0.83, z: -0.0019216537}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 519420032}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &358526518
+--- !u!114 &345183518
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 358526516}
+  m_GameObject: {fileID: 345183515}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8b44984075a847a2af9fb52a742a56a, type: 3}
+  m_Script: {fileID: 11500000, guid: ec7db5436737d467eb2288f801cfba9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pigeonPrefab: {fileID: 1627452524335140233, guid: dd909a19c342d4000987495ec32e9e9d, type: 3}
-  distanceMin: 5
-  distanceMax: 10
-  spawnTimer: 2
+  birdSprites:
+  - {fileID: 4035959289877228764, guid: e2db120b47c734f288e493f80fc28e0a, type: 3}
+  - {fileID: -982904232830982447, guid: e2db120b47c734f288e493f80fc28e0a, type: 3}
+  - {fileID: -350908408369970039, guid: e2db120b47c734f288e493f80fc28e0a, type: 3}
+  - {fileID: -5409570386352685021, guid: e2db120b47c734f288e493f80fc28e0a, type: 3}
+  - {fileID: 1553940418269799609, guid: e2db120b47c734f288e493f80fc28e0a, type: 3}
+  - {fileID: 2416434504916517810, guid: e2db120b47c734f288e493f80fc28e0a, type: 3}
+  animationFPS: 6
+--- !u!114 &345183519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345183515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d628076d807c245ff9b2de875c33cdc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -2
+--- !u!50 &345183520
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345183515}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,15 +550,15 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -0.187, z: -10.288}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1369410116}
-  - {fileID: 358526517}
+  - {fileID: 1593865674}
+  - {fileID: 853473065}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1369410115
+--- !u!1 &853473064
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -488,8 +566,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1369410116}
-  - component: {fileID: 1369410117}
+  - component: {fileID: 853473065}
+  - component: {fileID: 853473066}
   m_Layer: 0
   m_Name: PigeonSpawner
   m_TagString: Untagged
@@ -497,36 +575,84 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1369410116
+--- !u!4 &853473065
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369410115}
+  m_GameObject: {fileID: 853473064}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.09, y: 0.34, z: 9.998515}
+  m_LocalPosition: {x: 11.37, y: -2.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 519420032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1369410117
+--- !u!114 &853473066
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369410115}
+  m_GameObject: {fileID: 853473064}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8b44984075a847a2af9fb52a742a56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pigeonPrefab: {fileID: 0}
-  distanceMin: 5
-  distanceMax: 10
+  pigeonPrefab: {fileID: 345183515}
+  minY: -4.25
+  maxY: 4
+  spawnTimer: 2
+--- !u!1 &1593865673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1593865674}
+  - component: {fileID: 1593865675}
+  m_Layer: 0
+  m_Name: BirdSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1593865674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593865673}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.4, y: 2.68, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 519420032}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1593865675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593865673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b44984075a847a2af9fb52a742a56a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pigeonPrefab: {fileID: 63345206}
+  minY: -4.25
+  maxY: 4
   spawnTimer: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

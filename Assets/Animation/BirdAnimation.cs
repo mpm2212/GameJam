@@ -7,7 +7,7 @@ public class BirdAnimation : MonoBehaviour
 
     private Rigidbody2D rb2d;
     private SpriteRenderer spriteR;
-    private float frameTimer = 0.0f;
+    private float frameTimer = 0.1f;
     private int frameIndex = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

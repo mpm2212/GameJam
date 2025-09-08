@@ -9,17 +9,6 @@ public class PigeonSpawner : MonoBehaviour
     private float _currentTimer = 0f;
     public float spawnTimer = 2f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
-    {
-        if (pigeonPrefab == null)
-        {
-            Debug.LogError("🚨 PigeonSpawner: pigeonPrefab is NOT assigned!", this);
-        }
-        else
-        {
-            Debug.Log("✅ PigeonSpawner: pigeonPrefab assigned to " + pigeonPrefab.name, this);
-        }
-    }
     void Start()
     {
 
